@@ -3,7 +3,7 @@ package projetoFirstPOO;
 public class Teste {
 	public static void main(String[] args) {
 		
-		Clube clube1 = new Clube("São Paulo");
+	Clube clube1 = new Clube("São Paulo");
         Clube clube2 = new Clube("Flamengo");
         Clube clube3 = new Clube("Vascão");
         Clube clube4 = new Clube("Palmeiras");
