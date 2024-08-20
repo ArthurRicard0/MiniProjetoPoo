@@ -1,14 +1,14 @@
-Mini Projeto Java POO:
+## Mini Projeto Java POO:
 Desenvolvido por Arthur Ricardo Macêdo Pereira
 Um mini projeto em JAVA para a disciplina de Programação Orientada a Objetos 2024.1 da UFCA (Universidade Federal do Cariri) utilizando os conceitos iniciais de POO em JAVA como método de avaliação. 
 
-Especificação:
+### Especificação:
 Vamos desenvolver um programa em Java para simular um campeonato de futebol. Nosso campeonato terá as seguintes regras:
-•	Todos os clubes se enfrentam entre si em jogos de ida e volta;
-•	Um vitória vale 3 pontos, um empate vale 1 ponto e uma derrota não pontua;
-•	Ao final do campeonato, o clube com maior pontuação é o campeão;
-•	Em caso de empate no número de pontos, o saldo de gols deverá ser o critério de desempate;
-•	O saldo de gols é a diferença entre gols feitos e gols sofridos em todo o campeonato.
+-	Todos os clubes se enfrentam entre si em jogos de ida e volta;
+-	Um vitória vale 3 pontos, um empate vale 1 ponto e uma derrota não pontua;
+-	Ao final do campeonato, o clube com maior pontuação é o campeão;
+-	Em caso de empate no número de pontos, o saldo de gols deverá ser o critério de desempate;
+-	O saldo de gols é a diferença entre gols feitos e gols sofridos em todo o campeonato.
 Para implementação do campeonato deveremos ter as seguintes classes
 
 A classe Clube tem como atributos seu nome, seu número de pontos e seu saldo de gols. Os métodos ganhar, empatar e perder devem incrementar os pontos e o saldo de gols de acordo com as regras do campeonato.
