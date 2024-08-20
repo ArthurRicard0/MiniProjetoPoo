@@ -1,5 +1,5 @@
 ## Mini Projeto Java POO:
-Desenvolvido por Arthur Ricardo Macêdo Pereira
+Desenvolvido por <Strong>Arthur Ricardo Macêdo Pereira</Strong>.
 Um mini projeto em JAVA para a disciplina de Programação Orientada a Objetos 2024.1 da UFCA (Universidade Federal do Cariri) utilizando os conceitos iniciais de POO em JAVA como método de avaliação. 
 
 ### Especificação:
