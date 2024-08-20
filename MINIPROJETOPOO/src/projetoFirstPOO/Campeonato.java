@@ -11,7 +11,7 @@ public class Campeonato {
 		if (tam % 2 == 0) {
 			clubes = new Clube[tam];
 		} else {
-			System.out.println("AQUI NAO TEM QUANTIDADE IMPAR NÃO!");
+			System.out.println("AQUI NAO PODE QUANTIDADE IMPAR NÃO!");
 		}
 		
 	}
@@ -36,13 +36,17 @@ public class Campeonato {
 		int golsClube2 = random.nextInt(6);
 		
 		System.out.println("O jogo do " + clube1.nome + " contra o " + clube2.nome + " saiu de: " + golsClube1 + " x " + golsClube2 + " respectivamente");
-		
+		int saldoGolsOne = golsClube1 - golsClube2;
+		int saldoGolsTwo = golsClube2 - golsClube1;
 		if (golsClube1 > golsClube2) {
-			int saldoGolsOne = golsClube1 - golsClube2;
 			clube1.ganhar(saldoGolsOne);
+			clube2.perdeu(saldoGolsOne);
 		} else if (golsClube2 > golsClube1) {
-			int saldoGolsTwo = golsClube2 = golsClube1;
 			clube2.ganhar(saldoGolsTwo);
+			clube1.perdeu(saldoGolsTwo);
+		}else if(golsClube2 == golsClube1) {
+			clube1.empatar();
+			clube2.empatar();
 		}
 	}
 	
@@ -51,7 +55,7 @@ public class Campeonato {
 		int tamVetor = clubes.length;
 		System.out.println(tamVetor);
 		
-		for (int i = 0; i < clubes.length; i++) {
+		for (int i = 0; i < clubes.length-1; i++) {
 			for (int j = i + 1; j < clubes.length; j++) {
 				if(clubes[j] != null) {
 					System.out.println("-----------------------------");
@@ -69,7 +73,11 @@ public class Campeonato {
 		 */
 	}
 	
-	public void clasificacao() {
+	public String clasificacao() {
+		
+		String resultado = "";
+		
+		
 		for (int i = 0; i < clubes.length - 1; i++) {
 			for (int j = i + 1; j < clubes.length; j++) {
 				if (clubes[i].pontos < clubes[j].pontos ||
@@ -81,8 +89,17 @@ public class Campeonato {
 				}
 			}
 		}
-		System.out.println("O clube vencedor foi: "+ clubes[0].nome + " Com o total de pontos de: "+ clubes[0].pontos + " E um saldo de gols de: "+ clubes[0].saldoGols);
 		
+		System.out.println("TABELA DE RESULTADOS DO CAMPEONATO");
 		
+		for (Clube clube : clubes) {
+			resultado += clube.nome + "\n Pontos: " + clube.pontos + " | Saldo de gols: " + clube.saldoGols + "\n";
+		}
+		return resultado;
+	}
+	
+	public void Campeao() {
+		System.out.println("Parabéns " + clubes[0].nome + " você foi o CAMPEÃO!!");
 	}
 }
+
